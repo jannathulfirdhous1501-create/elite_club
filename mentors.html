@@ -2,51 +2,41 @@
 <html>
 <head>
 <title>Mentors - ELITE</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:Arial;background:#f4f7fb;}
+.navbar{display:flex;justify-content:space-between;padding:15px 40px;background:#0b1a2f;}
+.navbar h2{color:#00ff88;}
+.navbar a{color:white;text-decoration:none;margin-left:20px;}
+.section{text-align:center;padding:80px 20px;}
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
+.card{background:white;padding:25px;width:250px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.1);}
+footer{background:#0b1a2f;color:white;text-align:center;padding:20px;}
+</style>
 </head>
+<body>
 
-<body class="bg-gray-950 text-white">
+<div class="navbar">
+<h2>ELITE</h2>
+<div>
+<a href="index.html">Home</a>
+<a href="programs.html">Programs</a>
+<a href="mentors.html">Mentors</a>
+<a href="events.html">Events</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
 
-<!-- Navbar -->
-<nav class="bg-gray-900 p-4 flex justify-between items-center">
-  <h1 class="text-xl font-bold text-green-400">ELITE</h1>
-  <div class="space-x-6">
-    <a href="index.html" class="hover:text-green-400">Home</a>
-    <a href="programs.html" class="hover:text-green-400">Programs</a>
-    <a href="events.html" class="hover:text-green-400">Events</a>
-    <a href="contact.html" class="hover:text-green-400">Contact</a>
-  </div>
-</nav>
+<div class="section">
+<h1>Our Mentors</h1>
+<div class="cards">
+<div class="card"><h3>Technical Mentor</h3><p>Guidance in Electronics & AI.</p></div>
+<div class="card"><h3>Programming Mentor</h3><p>Expert in C, Python & Web Dev.</p></div>
+<div class="card"><h3>Innovation Coach</h3><p>Hackathon & Startup guidance.</p></div>
+</div>
+</div>
 
-<!-- Mentors Section -->
-<section class="p-12 text-center">
-  <h2 class="text-4xl font-bold text-green-400 mb-10">Our Mentors</h2>
-
-  <div class="grid md:grid-cols-3 gap-8">
-
-    <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
-      <h3 class="text-xl font-bold text-yellow-400">Electronics Mentor</h3>
-      <p class="mt-4 text-gray-300">
-        Expert in circuit design, PCB building and hands-on electronics projects.
-      </p>
-    </div>
-
-    <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
-      <h3 class="text-xl font-bold text-yellow-400">AI & IoT Mentor</h3>
-      <p class="mt-4 text-gray-300">
-        Specializes in Artificial Intelligence, IoT systems and smart innovations.
-      </p>
-    </div>
-
-    <div class="bg-gray-800 p-6 rounded-2xl shadow-lg">
-      <h3 class="text-xl font-bold text-yellow-400">Programming Mentor</h3>
-      <p class="mt-4 text-gray-300">
-        Guides students in coding, app development and modern technologies.
-      </p>
-    </div>
-
-  </div>
-</section>
+<footer>© 2026 ELITE Learning Club</footer>
 
 </body>
 </html>
