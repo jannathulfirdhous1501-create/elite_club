@@ -33,7 +33,7 @@ body{
 
 .logo{
   color:#00ff88;
-  font-size:24px;
+  font-size:22px;
   font-weight:bold;
 }
 
@@ -61,7 +61,7 @@ body{
   cursor:pointer;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero{
   height:100vh;
   background:linear-gradient(135deg,#11998e,#38ef7d);
@@ -74,11 +74,12 @@ body{
 }
 
 .hero-content{
-  animation:fadeIn 1.5s ease-in-out;
+  animation:fadeIn 1.2s ease-in-out;
+  margin-top:60px;
 }
 
 .hero h1{
-  font-size:50px;
+  font-size:45px;
 }
 
 .hero span{
@@ -93,59 +94,29 @@ body{
   margin-right:auto;
 }
 
-.hero button{
+.btn{
   margin-top:30px;
   padding:12px 25px;
   border:none;
   border-radius:25px;
   font-size:16px;
   cursor:pointer;
-  background:#ffd700;
   font-weight:bold;
   transition:0.3s;
 }
 
-.hero button:hover{
-  transform:scale(1.05);
+.primary{
+  background:#ffd700;
 }
 
-/* SECTIONS */
-section{
-  padding:100px 20px;
-  text-align:center;
-}
-
-section h2{
-  margin-bottom:30px;
-  font-size:32px;
-  color:#0b1a2f;
-}
-
-.card-container{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
-
-.card{
-  background:white;
-  padding:20px;
-  width:250px;
-  border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-5px);
-}
-
-footer{
-  background:#0b1a2f;
+.secondary{
+  background:transparent;
+  border:2px solid white;
   color:white;
-  padding:20px;
-  text-align:center;
+}
+
+.btn:hover{
+  transform:scale(1.05);
 }
 
 /* MOBILE */
@@ -171,7 +142,7 @@ footer{
   }
 
   .hero h1{
-    font-size:32px;
+    font-size:30px;
   }
 }
 
@@ -193,66 +164,32 @@ footer{
 
 <!-- NAVBAR -->
 <nav class="navbar">
-  <div class="logo">ELITE</div>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <img src="logo.png" width="40">
+    <div class="logo">ELITE</div>
+  </div>
+
   <div class="menu-toggle" id="mobile-menu">☰</div>
+
   <ul class="nav-list">
-    <li><a href="#">Home</a></li>
-    <li><a href="#programs">Programs</a></li>
-    <li><a href="#mentors">Mentors</a></li>
-    <li><a href="#events">Events</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="mentors.html">Mentors</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 <section class="hero">
   <div class="hero-content">
     <h1>Learn, Build & Innovate with <span>ELITE</span></h1>
     <p>Electronics Learning Innovation Technology Education. Hands-on circuit building, AI, IoT, Programming & Academic Growth.</p>
-    <button onclick="document.getElementById('programs').scrollIntoView()">Explore Programs</button>
+
+    <button class="btn primary" onclick="location.href='programs.html'">Explore Programs</button>
+    <button class="btn secondary" onclick="location.href='login.html'">Login</button>
   </div>
 </section>
-
-<!-- PROGRAMS -->
-<section id="programs">
-  <h2>Our Programs</h2>
-  <div class="card-container">
-    <div class="card">AI & Machine Learning</div>
-    <div class="card">IoT & Embedded Systems</div>
-    <div class="card">Web Development</div>
-  </div>
-</section>
-
-<!-- MENTORS -->
-<section id="mentors">
-  <h2>Our Mentors</h2>
-  <div class="card-container">
-    <div class="card">Experienced Engineers</div>
-    <div class="card">Industry Experts</div>
-    <div class="card">Startup Founders</div>
-  </div>
-</section>
-
-<!-- EVENTS -->
-<section id="events">
-  <h2>Events</h2>
-  <div class="card-container">
-    <div class="card">Hackathons</div>
-    <div class="card">Workshops</div>
-    <div class="card">Tech Talks</div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: elitelearningclub@gmail.com</p>
-  <p>Phone: +91 XXXXX XXXXX</p>
-</section>
-
-<footer>
-  © 2026 ELITE Learning Club | All Rights Reserved
-</footer>
 
 <script>
 const menu = document.getElementById("mobile-menu");
