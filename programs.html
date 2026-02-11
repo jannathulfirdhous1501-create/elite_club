@@ -2,65 +2,40 @@
 <html>
 <head>
 <title>Programs - ELITE</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body{margin:0;font-family:Arial;background:#f4f7fb;}
-.navbar{
-display:flex;
-flex-wrap:wrap;
-justify-content:space-between;
-align-items:center;
-padding:15px 20px;
-background:#0b1a2f;
-color:white;
-}
-
-.navbar div{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
-
-.navbar a{
-color:white;
-text-decoration:none;
-margin:5px;
-font-size:14px;
-}
-
-.section{padding:80px 20px;text-align:center;}
-.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
-.card{
-background:white;padding:25px;width:260px;border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-footer{background:#0b1a2f;color:white;text-align:center;padding:20px;}
-</style>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 
-<div class="navbar">
-<h2>ELITE</h2>
-<div>
-<a href="index.html">Home</a>
-<a href="programs.html">Programs</a>
-<a href="mentors.html">Mentors</a>
-<a href="events.html">Events</a>
-<a href="contact.html">Contact</a>
-</div>
-</div>
+<body class="bg-gray-950 text-white">
 
-<div class="section">
-<h1>Our Programs</h1>
-<div class="cards">
-<div class="card"><h3>Electronics</h3><p>Hands-on circuit building & PCB basics.</p></div>
-<div class="card"><h3>AI & ML</h3><p>Build real-world machine learning models.</p></div>
-<div class="card"><h3>IoT</h3><p>Smart systems using sensors & cloud.</p></div>
-<div class="card"><h3>Programming</h3><p>C, Python & Web development skills.</p></div>
-</div>
+<div class="p-10 text-center">
+<h1 class="text-4xl font-bold text-green-400 mb-10">Our Programs</h1>
+
+<div class="grid md:grid-cols-2 gap-8">
+
+<div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+<h2 class="text-2xl font-bold text-yellow-400">Learning</h2>
+<p class="mt-4">Skill sessions, workshops, circuit building, peer-to-peer teaching.</p>
 </div>
 
-<footer>© 2026 ELITE Learning Club</footer>
+<div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+<h2 class="text-2xl font-bold text-yellow-400">Innovation</h2>
+<p class="mt-4">Creative thinking, idea building, real-world problem solving.</p>
+</div>
+
+<div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+<h2 class="text-2xl font-bold text-yellow-400">Technology</h2>
+<p class="mt-4">AI, IoT, Programming & modern tech exposure.</p>
+</div>
+
+<div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+<h2 class="text-2xl font-bold text-yellow-400">Education</h2>
+<p class="mt-4">Academic support, communication skills, growth mindset training.</p>
+</div>
+
+</div>
+
+<a href="index.html" class="block mt-10 text-green-400 underline">Back to Home</a>
+</div>
 
 </body>
 </html>
