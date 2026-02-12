@@ -3,265 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ELITE Learning Club</title>
+<title>ELITE - The Learning Club</title>
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  scroll-behavior:smooth;
-}
+<script src="https://cdn.tailwindcss.com"></script>
 
-body{
-  background:#f5f7fa;
-}
+<!-- Custom Animations -->
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      animation: {
+        fade: "fadeIn 2s ease-in-out",
+        slide: "slideUp 1.5s ease-out",
+        zoom: "zoomIn 1.5s ease-in-out",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+        slideUp: {
+          "0%": { transform: "translateY(50px)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
+        },
+        zoomIn: {
+          "0%": { transform: "scale(0.8)", opacity: 0 },
+          "100%": { transform: "scale(1)", opacity: 1 },
+        },
+      },
+    },
+  },
+};
+</script>
 
-/* NAVBAR */
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 30px;
-  background:#0b1a2f;
-  position:fixed;
-  width:100%;
-  top:0;
-  z-index:1000;
-}
-
-.logo{
-  color:#00ff88;
-  font-size:24px;
-  font-weight:bold;
-}
-
-.nav-list{
-  list-style:none;
-  display:flex;
-  gap:25px;
-}
-
-.nav-list li a{
-  text-decoration:none;
-  color:white;
-  font-weight:500;
-  transition:0.3s;
-}
-
-.nav-list li a:hover{
-  color:#00ff88;
-}
-
-.menu-toggle{
-  display:none;
-  font-size:28px;
-  color:white;
-  cursor:pointer;
-}
-
-/* HERO SECTION */
-.hero{
-  height:100vh;
-  background:linear-gradient(135deg,#11998e,#38ef7d);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:20px;
-  color:white;
-}
-
-.hero-content{
-  animation:fadeIn 1.5s ease-in-out;
-}
-
-.hero h1{
-  font-size:50px;
-}
-
-.hero span{
-  color:#ffd700;
-}
-
-.hero p{
-  margin-top:20px;
-  font-size:18px;
-  max-width:600px;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-.hero button{
-  margin-top:30px;
-  padding:12px 25px;
-  border:none;
-  border-radius:25px;
-  font-size:16px;
-  cursor:pointer;
-  background:#ffd700;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.hero button:hover{
-  transform:scale(1.05);
-}
-
-/* SECTIONS */
-section{
-  padding:100px 20px;
-  text-align:center;
-}
-
-section h2{
-  margin-bottom:30px;
-  font-size:32px;
-  color:#0b1a2f;
-}
-
-.card-container{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
-
-.card{
-  background:white;
-  padding:20px;
-  width:250px;
-  border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-5px);
-}
-
-footer{
-  background:#0b1a2f;
-  color:white;
-  padding:20px;
-  text-align:center;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .nav-list{
-    position:absolute;
-    top:60px;
-    right:0;
-    background:#0b1a2f;
-    width:200px;
-    flex-direction:column;
-    text-align:center;
-    display:none;
-    padding:20px 0;
-  }
-
-  .nav-list.active{
-    display:flex;
-  }
-
-  .menu-toggle{
-    display:block;
-  }
-
-  .hero h1{
-    font-size:32px;
-  }
-}
-
-/* ANIMATION */
-@keyframes fadeIn{
-  from{
-    opacity:0;
-    transform:translateY(20px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-</style>
 </head>
 
-<body>
+<body class="bg-gray-950 text-white scroll-smooth">
 
 <!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">ELITE</div>
-  <div class="menu-toggle" id="mobile-menu">☰</div>
-  <ul class="nav-list">
-    <li><a href="#">Home</a></li>
-    <li><a href="#programs">Programs</a></li>
-    <li><a href="#mentors">Mentors</a></li>
-    <li><a href="#events">Events</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+<nav class="bg-gray-900 shadow-lg p-4 sticky top-0 z-50">
+  <div class="container mx-auto flex justify-between items-center">
+    
+    <div class="flex items-center space-x-3 animate-fade">
+      <img src="logo.png" class="h-12 w-12 rounded-full shadow-lg">
+      <h1 class="text-2xl font-bold text-green-400">ELITE</h1>
+    </div>
+
+    <div class="space-x-6 hidden md:flex">
+      <a href="index.html" class="hover:text-green-400">Home</a>
+      <a href="programs.html" class="hover:text-green-400">Programs</a>
+      <a href="mentors.html" class="hover:text-green-400">Mentors</a>
+      <a href="events.html" class="hover:text-green-400">Events</a>
+      <a href="contact.html" class="hover:text-green-400">Contact</a>
+    </div>
+
+  </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Learn, Build & Innovate with <span>ELITE</span></h1>
-    <p>Electronics Learning Innovation Technology Education. Hands-on circuit building, AI, IoT, Programming & Academic Growth.</p>
-    <button onclick="document.getElementById('programs').scrollIntoView()">Explore Programs</button>
+<!-- HERO SECTION -->
+<section class="bg-gradient-to-r from-teal-600 to-green-600 py-24">
+  <div class="container mx-auto px-6 md:flex items-center justify-between">
+    
+    <!-- Left Content -->
+    <div class="md:w-1/2 animate-slide">
+      <h2 class="text-5xl font-bold leading-tight">
+        Learn, Build & Innovate with 
+        <span class="text-yellow-300">ELITE</span>
+      </h2>
+
+      <p class="mt-6 text-lg">
+        Electronics Learning Innovation Technology Education.
+        Hands-on circuit building, AI, IoT, Programming & Academic Growth.
+      </p>
+
+      <div class="mt-8 space-x-4">
+        <a href="programs.html"
+           class="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition duration-300">
+           Explore Programs
+        </a>
+
+        <a href="login.html"
+           class="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition duration-300">
+           Login
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="md:w-1/2 mt-10 md:mt-0 animate-zoom">
+      <img src="logo.png" class="rounded-2xl shadow-2xl mx-auto w-72">
+    </div>
+
   </div>
 </section>
 
-<!-- PROGRAMS -->
-<section id="programs">
-  <h2>Our Programs</h2>
-  <div class="card-container">
-    <div class="card">AI & Machine Learning</div>
-    <div class="card">IoT & Embedded Systems</div>
-    <div class="card">Web Development</div>
+<!-- ABOUT SECTION -->
+<section class="py-20 bg-gray-900 animate-fade">
+  <div class="container mx-auto px-6 text-center">
+    <h3 class="text-3xl font-bold text-green-400 mb-6">About ELITE</h3>
+
+    <p class="max-w-3xl mx-auto text-gray-300 text-lg leading-relaxed">
+      ELITE is a student-driven electronics and technology club focused on practical learning.
+      We conduct skill sessions, workshops, peer-to-peer learning, AI & IoT exposure,
+      innovation training, academic support and growth mindset development.
+    </p>
   </div>
 </section>
 
-<!-- MENTORS -->
-<section id="mentors">
-  <h2>Our Mentors</h2>
-  <div class="card-container">
-    <div class="card">Experienced Engineers</div>
-    <div class="card">Industry Experts</div>
-    <div class="card">Startup Founders</div>
+<!-- FEATURES SECTION -->
+<section class="py-20 bg-gray-950">
+  <div class="container mx-auto px-6 text-center">
+    <h3 class="text-3xl font-bold text-green-400 mb-12">Why Join ELITE?</h3>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <div class="bg-gray-800 p-8 rounded-2xl shadow-lg hover:scale-105 transition duration-300">
+        <h4 class="text-xl font-bold text-yellow-400">Hands-on Learning</h4>
+        <p class="mt-4 text-gray-300">
+          Build real circuits, work on projects and gain practical knowledge.
+        </p>
+      </div>
+
+      <div class="bg-gray-800 p-8 rounded-2xl shadow-lg hover:scale-105 transition duration-300">
+        <h4 class="text-xl font-bold text-yellow-400">Modern Technologies</h4>
+        <p class="mt-4 text-gray-300">
+          Learn AI, IoT, Programming and latest tech trends.
+        </p>
+      </div>
+
+      <div class="bg-gray-800 p-8 rounded-2xl shadow-lg hover:scale-105 transition duration-300">
+        <h4 class="text-xl font-bold text-yellow-400">Innovation Culture</h4>
+        <p class="mt-4 text-gray-300">
+          Creative thinking, idea building and problem solving sessions.
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- EVENTS -->
-<section id="events">
-  <h2>Events</h2>
-  <div class="card-container">
-    <div class="card">Hackathons</div>
-    <div class="card">Workshops</div>
-    <div class="card">Tech Talks</div>
+<!-- QR JOIN SECTION -->
+<section class="bg-gray-800 py-20 text-center animate-fade">
+  <h3 class="text-2xl font-bold mb-6">Join Our WhatsApp Channel</h3>
+
+  <img 
+  src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://whatsapp.com/channel/0029VbCDGp1EwEjs1EUJrt2L"
+  class="mx-auto rounded-lg shadow-lg">
+
+  <p class="mt-6">
+    <a href="https://whatsapp.com/channel/0029VbCDGp1EwEjs1EUJrt2L"
+       target="_blank"
+       class="text-green-400 underline text-lg">
+       Click Here to Join
+    </a>
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-center py-10">
+
+  <p>
+    📧 <a href="mailto:elite2025vision@gmail.com" class="text-green-400">
+    elite2025vision@gmail.com</a>
+  </p>
+
+  <p class="mt-2">
+    📞 <a href="tel:7530000825" class="text-green-400">
+    7530000825</a>
+  </p>
+
+  <div class="mt-6 space-x-6">
+    <a href="https://www.linkedin.com/in/elite-the-learning-club-4972293a5"
+       target="_blank" class="text-blue-400 hover:underline">LinkedIn</a>
+
+    <a href="https://www.instagram.com/xtreme_elite_25?igsh=MTRoYXVhbnB2MHNkaA=="
+       target="_blank" class="text-pink-400 hover:underline">Instagram</a>
+
+    <a href="https://whatsapp.com/channel/0029VbCDGp1EwEjs1EUJrt2L"
+       target="_blank" class="text-green-400 hover:underline">WhatsApp</a>
   </div>
-</section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: elitelearningclub@gmail.com</p>
-  <p>Phone: +91 XXXXX XXXXX</p>
-</section>
+  <p class="mt-8 text-gray-500 text-sm">
+    © 2026 ELITE Learning Club – SSM Institute of Engineering and Technology
+  </p>
 
-<footer>
-  © 2026 ELITE Learning Club | All Rights Reserved
 </footer>
-
-<script>
-const menu = document.getElementById("mobile-menu");
-const navList = document.querySelector(".nav-list");
-
-menu.addEventListener("click", ()=>{
-  navList.classList.toggle("active");
-});
-</script>
 
 </body>
 </html>
